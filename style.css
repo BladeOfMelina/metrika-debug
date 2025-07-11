@@ -19,7 +19,6 @@ body {
   overflow: hidden;
 }
 
-/* Легкий дым / туман */
 body::before {
   content: "";
   position: absolute;
