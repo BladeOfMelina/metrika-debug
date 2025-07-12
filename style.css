@@ -5,19 +5,20 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: 'Cormorant Garamond', serif;
   color: #d9d1b8;
   background: url('images/erdtree_bg.jpg') no-repeat center center/cover;
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 3rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 3rem 2rem;
 }
 
+/* Тёмная вуаль поверх фона */
 .overlay {
   position: absolute;
   inset: 0;
@@ -41,7 +42,7 @@ h1 {
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
   opacity: 0;
-  animation: fadeInUp 1.5s forwards ease-out;
+  animation: fadeInUp 1.2s forwards ease-out;
 }
 
 .divider {
@@ -52,24 +53,26 @@ h1 {
   box-shadow: 0 0 10px #d9c88a;
   border-radius: 2px;
   opacity: 0;
-  animation: fadeInUp 2s forwards ease-out;
-  animation-delay: 0.5s;
+  animation: fadeInUp 1.5s forwards ease-out;
+  animation-delay: 0.4s;
 }
 
-.poem {
-  font-size: 1.6rem;
-  line-height: 1.9;
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
   font-style: italic;
+  color: #d9d1b8;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
   opacity: 0;
-  animation: fadeInUp 2.5s forwards ease-out;
-  animation-delay: 1s;
+  animation: fadeInUp 2s forwards ease-out;
+  animation-delay: 0.8s;
 }
 
+/* Плавное появление */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
