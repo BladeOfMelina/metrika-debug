@@ -5,12 +5,13 @@
 }
 
 body {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Spectral SC', serif;
   background: url('images/erdtree_bg.jpg') no-repeat center center/cover;
-  color: #e3dac9;
+  color: #e9e4d4;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
 #fog-canvas {
@@ -21,29 +22,31 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  display: none;
+  display: block;
+  mix-blend-mode: screen;
+  opacity: 0.5;
 }
 
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 5, 0.65);
+  background: rgba(15, 10, 5, 0.6);
   z-index: 2;
 }
 
 main {
   position: relative;
   z-index: 3;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 2rem;
   text-align: center;
 }
 
 .hero h1 {
   font-family: 'Cinzel', serif;
   font-size: 4.5rem;
-  color: #f5e9c9;
-  text-shadow: 0 0 12px rgba(255, 248, 220, 0.6);
-  animation: fadeInUp 1.2s ease-out forwards;
+  color: #f6f1d3;
+  text-shadow: 0 0 20px rgba(253, 248, 211, 0.8);
+  animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .divider {
@@ -51,36 +54,17 @@ main {
   height: 3px;
   margin: 2rem auto;
   background: linear-gradient(90deg, transparent, #e3c96a, transparent);
-  box-shadow: 0 0 10px #d9c88a;
+  box-shadow: 0 0 12px #d9c88a;
   border-radius: 2px;
-  animation: fadeInUp 1.6s ease-out forwards;
-  animation-delay: 0.3s;
 }
 
 .hero p {
   font-size: 1.5rem;
   font-style: italic;
-  margin: 1rem 0 2rem;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  margin: 1.5rem 0;
+  color: #f1eee5;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
   animation: fadeInUp 2s ease-out forwards;
-  animation-delay: 0.6s;
-}
-
-button#toggle-fog {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #e3d9b8;
-  color: #e3d9b8;
-  font-family: 'Cinzel', serif;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  animation: fadeInUp 2.4s ease-out forwards;
-  animation-delay: 1s;
-}
-
-button#toggle-fog:hover {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .lore {
@@ -93,25 +77,35 @@ button#toggle-fog:hover {
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #f0e5ca;
+  color: #f2e3b9;
+  text-shadow: 0 0 12px rgba(255, 245, 200, 0.4);
 }
 
 .lore p {
   font-size: 1.2rem;
+  color: #ded8c2;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
 }
 
-.lore img {
+.lore img,
+.art img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  margin-top: 1rem;
+  animation: fadeInUp 2s ease-out;
 }
 
-/* Animations */
+.art {
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
