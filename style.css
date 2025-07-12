@@ -5,74 +5,113 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: 'Cormorant Garamond', serif;
-  color: #d9d1b8;
   background: url('images/erdtree_bg.jpg') no-repeat center center/cover;
+  color: #e3dac9;
+  overflow-x: hidden;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 3rem 2rem;
+  min-height: 100vh;
 }
 
-/* Тёмная вуаль поверх фона */
+#fog-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+}
+
 .overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(10, 10, 5, 0.65);
-  z-index: 0;
+  z-index: 2;
 }
 
 main {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
+  z-index: 3;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-h1 {
+.hero h1 {
   font-family: 'Cinzel', serif;
-  font-size: 4rem;
-  color: #e3d9b8;
-  text-shadow:
-    0 0 8px rgba(227, 217, 184, 0.7),
-    0 0 15px rgba(227, 217, 184, 0.4);
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeInUp 1.2s forwards ease-out;
+  font-size: 4.5rem;
+  color: #f5e9c9;
+  text-shadow: 0 0 12px rgba(255, 248, 220, 0.6);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .divider {
   width: 60%;
   height: 3px;
-  margin: 1.5rem auto;
-  background: linear-gradient(90deg, transparent, #d9c88a, transparent);
+  margin: 2rem auto;
+  background: linear-gradient(90deg, transparent, #e3c96a, transparent);
   box-shadow: 0 0 10px #d9c88a;
   border-radius: 2px;
-  opacity: 0;
-  animation: fadeInUp 1.5s forwards ease-out;
-  animation-delay: 0.4s;
+  animation: fadeInUp 1.6s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-p {
+.hero p {
   font-size: 1.5rem;
-  line-height: 1.8;
   font-style: italic;
-  color: #d9d1b8;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  animation: fadeInUp 2s forwards ease-out;
-  animation-delay: 0.8s;
+  margin: 1rem 0 2rem;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  animation: fadeInUp 2s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
-/* Плавное появление */
+button#toggle-fog {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #e3d9b8;
+  color: #e3d9b8;
+  font-family: 'Cinzel', serif;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  animation: fadeInUp 2.4s ease-out forwards;
+  animation-delay: 1s;
+}
+
+button#toggle-fog:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lore {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 2rem;
+}
+
+.lore h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f0e5ca;
+}
+
+.lore p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.lore img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
