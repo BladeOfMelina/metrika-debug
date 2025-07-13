@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Spectral SC', serif;
-  background: url('images/erdtree.jpg') no-repeat center center fixed;
+  background: url('images/erdtree_bg.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   color: #f3e9d2;
