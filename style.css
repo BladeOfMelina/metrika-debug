@@ -1,66 +1,76 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Crimson Pro', serif;
-  color: #d8ceb5;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB3MAAAPkCAYAAACz8xQDAAEAAElEQVR4nOz9eZxc1X0m/j/n3Op971ZrV7d2IQFCAgMSZjNYIAgm...") no-repeat center center/cover;
-  height: 100vh;
-  overflow: hidden;
   position: relative;
+  font-family: 'Spectral SC', serif;
+  color: #e3d8bc;
+  background: url('images/erdtree_bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 5, 0.7);
+  z-index: 0;
+  pointer-events: none;
 }
 
 #fog-canvas {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  inset: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
 main {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
-  padding: 5rem 2rem;
-  backdrop-filter: blur(3px);
+  padding: 8vh 2rem 4vh;
 }
 
-h1 {
-  font-family: 'Spectral', serif;
+.hero h1 {
+  font-family: 'Cinzel', serif;
   font-size: 4rem;
   color: #f3ebd7;
-  text-shadow: 0 0 10px rgba(255, 255, 240, 0.3);
+  text-shadow: 0 0 20px rgba(255, 245, 200, 0.8);
   margin-bottom: 1rem;
 }
 
-.divider {
-  width: 60%;
-  height: 3px;
-  margin: 2rem auto;
-  background: linear-gradient(90deg, transparent, #d9c88a, transparent);
-  box-shadow: 0 0 10px #d9c88a;
-  border-radius: 2px;
-}
-
-p {
+.intro {
+  font-size: 1.3rem;
   font-style: italic;
-  font-size: 1.6rem;
-  line-height: 2;
-  max-width: 720px;
-  margin: 0 auto 2rem;
-  color: #eae2c8;
-  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
-.art-image {
-  width: 80%;
-  max-width: 960px;
-  margin-top: 2rem;
+.content {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  margin: 4rem auto 2rem;
+  max-width: 800px;
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #f1e6c8;
+  text-shadow: 0 0 12px rgba(200,180,100,0.4);
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ded5bc;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
