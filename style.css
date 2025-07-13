@@ -6,37 +6,60 @@
 
 body {
   font-family: 'Spectral SC', serif;
-  background: url('images/erdtree-bg.png') no-repeat center center fixed;
+  background: url('images/erdtree.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   color: #f3e9d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: rgba(15, 8, 0, 0.6);
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
-  top: 20vh;
-  padding: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  animation: fadeIn 2s ease-out;
 }
 
 h1 {
-  font-size: 3.5rem;
-  text-shadow: 0 0 10px #000, 0 0 20px #a38329;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 0 5px #000;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f3e9d2;
+  color: #2c2c2c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #d2c7b8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
