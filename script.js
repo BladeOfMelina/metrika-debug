@@ -1,30 +1,35 @@
 const canvas = document.getElementById('fog-canvas');
 const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 let particles = [];
 
-for (let i = 0; i < 80; i++) {
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function createParticle() {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    r: Math.random() * 100 + 40,
-    dx: (Math.random() - 0.5) * 0.3,
-    dy: (Math.random() - 0.5) * 0.3
+    r: Math.random() * 150 + 50,
+    dx: (Math.random() - 0.5) * 0.2,
+    dy: (Math.random() - 0.5) * 0.2,
+    alpha: 0.02
   });
 }
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let p of particles) {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  if (particles.length < 20) createParticle();
+  particles.forEach((p, i) => {
     ctx.beginPath();
-    let gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-    gradient.addColorStop(0, 'rgba(255, 255, 240, 0.02)');
-    gradient.addColorStop(1, 'rgba(255, 255, 240, 0)');
-    ctx.fillStyle = gradient;
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+    grad.addColorStop(0, `rgba(255,245,200,${p.alpha})`);
+    grad.addColorStop(1, 'rgba(255,245,200,0)');
+    ctx.fillStyle = grad;
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
     ctx.fill();
 
     p.x += p.dx;
@@ -34,7 +39,7 @@ function draw() {
     if (p.x > canvas.width + p.r) p.x = -p.r;
     if (p.y < -p.r) p.y = canvas.height + p.r;
     if (p.y > canvas.height + p.r) p.y = -p.r;
-  }
+  });
   requestAnimationFrame(draw);
 }
 
