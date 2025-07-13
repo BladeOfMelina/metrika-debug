@@ -1,76 +1,42 @@
 * {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  position: relative;
   font-family: 'Spectral SC', serif;
-  color: #e3d8bc;
-  background: url('images/erdtree_bg.jpg') no-repeat center center/cover;
+  background: url('images/erdtree-bg.png') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
-  overflow-x: hidden;
+  color: #f3e9d2;
+  position: relative;
+  overflow: hidden;
 }
 
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 8, 5, 0.7);
+  background: rgba(20, 10, 0, 0.7);
   z-index: 0;
-  pointer-events: none;
-}
-
-#fog-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-main {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 8vh 2rem 4vh;
-}
-
-.hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 4rem;
-  color: #f3ebd7;
-  text-shadow: 0 0 20px rgba(255, 245, 200, 0.8);
-  margin-bottom: 1rem;
-}
-
-.intro {
-  font-size: 1.3rem;
-  font-style: italic;
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 0 auto;
-  text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
 .content {
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(4px);
-  margin: 4rem auto 2rem;
-  max-width: 800px;
-  padding: 2rem;
-  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 20vh;
+  padding: 20px;
 }
 
-.content h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #f1e6c8;
-  text-shadow: 0 0 12px rgba(200,180,100,0.4);
+h1 {
+  font-size: 3.5rem;
+  text-shadow: 0 0 10px #000, 0 0 20px #a38329;
 }
 
-.content p {
-  font-size: 1.1rem;
+p {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
   line-height: 1.6;
-  color: #ded5bc;
-  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 5px #000;
 }
