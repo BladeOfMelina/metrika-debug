@@ -8,6 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
     desc.innerHTML = "Ты сделал шаг в мир, где история пишет кровь. <br> И лишь тьма знает конец.";
     btn.style.display = "none";
   });
-
-  console.log("SotE: Script Loaded");
 });
