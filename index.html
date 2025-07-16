@@ -44,7 +44,20 @@
     </label><br><br>
     <button type="submit">Отправить</button>
   </form>
+  
+  <p style="margin-top: 40px;">
+    Телефон для связи: 
+    <span id="phone-span" style="color: #003366; font-size: 16px;">
+      8 (800) 100-0037
+    </span>
+  </p>
 </main>
+
+<script>
+  document.getElementById('phone-span').addEventListener('copy', () => {
+    ym(103317803, 'reachGoal', 'copy_phone');
+  });
+</script>
 
 <script src="script.js"></script>
 </body>
