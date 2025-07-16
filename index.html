@@ -45,17 +45,21 @@
     <button type="submit">Отправить</button>
   </form>
   
-  <p style="margin-top: 40px;">
-    Телефон тест: 
-    <span id="phone-span" style="color: #003366; font-size: 16px; font-weight: bold; display: block; padding: 10px; background: #eef;">
-      8 (800) 000-0000
-    </span>
-  </p>
+<p style="margin-top: 40px;">
+  Телефон тест: 
+  <span id="phone-span" style="color: #003366; font-size: 16px; font-weight: bold; display: block; padding: 10px; background: #eef;">
+    8 (800) 000-0000
+  </span>
+</p>
+  
 </main>
 
 <script>
-  document.getElementById('phone-span').addEventListener('copy', () => {
-    ym(103317803, 'reachGoal', 'copy_phone');
+  document.addEventListener('copy', (event) => {
+    const selectedText = window.getSelection().toString();
+    if (selectedText.includes('8 (800) 000-0000')) {
+      ym(103317803, 'reachGoal', 'copy_phone');
+    }
   });
 </script>
 
