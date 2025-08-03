@@ -7,6 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.hash = "submitted" + Math.floor(Math.random() * 1000);
-    console.log("Форма отправлена. Страница не перезагружается. Хэш добавлен.");
   });
 });
