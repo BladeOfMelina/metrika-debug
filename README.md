@@ -1,2 +1,2 @@
 # metrika-debug
-deploy test
+deploy only test
