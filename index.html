@@ -3,81 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shadow of the Erdtree</title>
+
+  <title>Земля Теней</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
- <style>
-    html, body {
-      height: auto;
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-y: auto;
-    }
-
-    main.content {
-      padding: 20px;
-    }
-    .scroll-extension {
-      height: 5000px;
-      background: linear-gradient(to bottom, transparent 0%, #f0f0f0 100%);
-    }
-  </style>
 </head>
+
 <body>
-  <script type="text/javascript">
+
+<script type="text/javascript">
 (function(e, x, pe, r, i, me, nt){
 e[i]=e[i]||function(){(e[i].a=e[i].a||[]).push(arguments)},
 me=x.createElement(pe),me.async=1,me.src=r,nt=x.getElementsByTagName(pe)[0],me.addEventListener('error',function(){function cb(t){t=t[t.length-1],'function'==typeof t&&t({flags:{}})};Array.isArray(e[i].a)&&e[i].a.forEach(cb);e[i]=function(){cb(arguments)}}),nt.parentNode.insertBefore(me,nt)})
 (window, document, 'script', 'https://abt.s3.yandex.net/expjs/latest/exp.js', 'ymab');
-ymab('metrika.103317803', 'init'/*, {clientFeatures}, {callback}*/);
+ymab('metrika.103317803', 'init');
 </script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-  (function(m,e,t,r,i,k,a){
+(function(m,e,t,r,i,k,a){
     m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-  })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+    for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+            return;
+        }
+    }
+    k=e.createElement(t),
+    a=e.getElementsByTagName(t)[0],
+    k.async=1,
+    k.src=r,
+    a.parentNode.insertBefore(k,a);
+})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-  ym(103317803, 'init', {webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true, trackHash:true});
+ym(103317803, 'init', {
+    webvisor: true,
+    clickmap: true,
+    ecommerce: "dataLayer",
+    accurateTrackBounce: true,
+    trackLinks: true,
+    trackHash: true
+});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103317803" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<noscript>
+  <div>
+    <img
+      src="https://mc.yandex.ru/watch/103317803"
+      style="position:absolute; left:-9999px;"
+      alt=""
+    />
+  </div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
-<div class="overlay"></div>
+
 <main class="content">
-  <h1 id="title">Земля Теней</h1>
-  <p id="description">
-    Место, скрытое Древом Эрд. <br>
-    Там, где впервые ступила нога богини Марики.<br><br>
 
-    Земля, очищенная в незаметной битве. <br>
-    Опалённая пламенем Мессмера.<br><br>
+  <section class="hero">
 
-    Именно в эти земли отправился Микелла. <br>
-    Лишив себя плоти, силы, рода. Всего золотого.<br><br>
+    <h1>Земля Теней</h1>
 
-    И теперь Микелла ждёт возвращения своего обещанного лорда.
-  </p>
-  <a href="https://vk.com?utm_source=test" target="_blank">Перейти на VK</a>
-  <form id="testForm">
-    <label>
-      <input type="checkbox" id="myCheckbox" name="agreement" />
-      Я согласен с условиями
-    </label><br><br>
-    <button type="submit">Отправить</button>
-  </form>
-  
-<p style="margin-top: 40px;">
-  Phone test: 
-  <span id="phone-span" style="color: #003366; font-size: 16px; font-weight: bold; display: block; padding: 10px; background: #eef;">
-    8 (900) 000-0000
-  </span>
-</p>
-  
+    <p class="description">
+      Место, скрытое Древом Эрд.<br>
+      Там, где впервые ступила нога богини Марики.
+      <br><br>
+
+      Земля, очищенная в незаметной битве.<br>
+      Опалённая пламенем Мессмера.
+      <br><br>
+
+      Именно в эти земли отправился Микелла.<br>
+      Лишив себя плоти, силы, рода. Всего золотого.
+      <br><br>
+
+      И теперь Микелла ждёт возвращения своего обещанного лорда.
+    </p>
+
+    <div class="buttons">
+      <a
+        class="btn"
+        href="https://vk.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Узнать больше
+      </a>
+    </div>
+
+  </section>
+
+  <section class="cards">
+
+    <article class="card">
+      <h2>Микелла</h2>
+      <p>
+        Эмпирей, отказавшийся от своей плоти и золотого наследия
+        ради новой эпохи.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Мессмер</h2>
+      <p>
+        Повелитель багрового пламени, оставивший свой след
+        в истории Земли Теней.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Марика</h2>
+      <p>
+        Богиня Золотого Порядка, чья судьба навсегда связана
+        с этим забытым краем.
+      </p>
+    </article>
+
+  </section>
+
 </main>
-  
+
 <script src="script.js"></script>
+
 </body>
 </html>
