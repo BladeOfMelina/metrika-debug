@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("page loaded");
+    console.log("page loaded"); // для тестов
 });
